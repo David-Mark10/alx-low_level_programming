@@ -3,8 +3,7 @@
 #include <time.h>
 
 /**
- *
- * main Entry Piont
+ * main - Entry Piont
  *
  * Return: Always 0 (Success)
  */
