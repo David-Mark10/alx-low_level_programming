@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
  * main - Entry Piont
  *
@@ -9,8 +8,7 @@
  */
 
 int main(void)
-{	
-	char low;
+{	char low;
 
 	for (low = 'a'; low <= 'z'; low++)
 		putchar(low);
