@@ -1,4 +1,4 @@
-#include 'main.h'
+#include "main.h"
 /**
  * main - Entry Point
  *
@@ -10,5 +10,5 @@ void print_alphabet(void)
 
 	for (int i = 'a'; i <= 'z'; i++)
 		_putchar(i);
-	Putchar('\n');
-	return;
+	_Putchar('\n');
+	
