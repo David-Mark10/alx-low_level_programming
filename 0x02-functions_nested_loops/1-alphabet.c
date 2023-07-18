@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * main - Entry Point
- *
- * Return: Always 0 (Success)
+ *Discription:it prints alphabet in small letter
+ * Return: Nothing.
  */
 void print_alphabet(void)
 {
