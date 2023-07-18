@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_sign - Check Holberton
  * @n: An input number
