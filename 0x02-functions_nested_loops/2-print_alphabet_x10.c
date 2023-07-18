@@ -4,7 +4,7 @@
  * description: To print 10 times lower case alphabet
  * Return: Always 0 (Success)
  */
-void void print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
 	char i;
 	int j;
