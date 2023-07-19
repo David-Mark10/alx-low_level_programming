@@ -1,11 +1,9 @@
 #include "main.h"
 /**
- * print_sign - Check Holberton
- * @n: An input number
+ * print_sign - Check Holberton an input number
  * Description: This is my function to print 
  * the sign of the number
- * Return: 1 if number is a positive, o if number is 0, or
- * -1 if number is negative
+ * Return: 1 if number is a positive, o if number is 0
  */
 int print_sign(int n)
 {
