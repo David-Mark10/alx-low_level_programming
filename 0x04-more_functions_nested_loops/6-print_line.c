@@ -1,8 +1,10 @@
 #include "main.h"
 /**
- * Main - Entry Point
+ * print_line - This command print a stratight line on the terminal.
  *
- * Description: This code will print a straight line
+ * @n: An input integer
+ *
+ * Description: This code will print a straight line and a new line
  *
  * Return: Always 0 (Success)
  */
