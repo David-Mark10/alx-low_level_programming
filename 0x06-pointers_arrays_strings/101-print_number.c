@@ -1,9 +1,11 @@
 #include "main.h"
 /**
-* print_number -This command prints an integer
-*@n:integer to be printed
-*
-*/
+ * print_number -This command prints an integer
+ *
+ * @n:integer to be printed
+ *
+ * This command prints integer number
+ */
 void print_number(int n)
 {
 	unsigned int num = n;
