@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * _memset -this is a function that fills memory with constant bytes
