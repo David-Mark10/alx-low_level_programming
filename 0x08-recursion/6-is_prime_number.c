@@ -3,8 +3,9 @@
 /** 
  * is_prime_number - returns true if the number is prime
  *  @n: the number to check
+ *  @start: this is number to start checking from.
  *
- *  Return: true if the number is prime
+ *  Return: this is true if the number is prime
  */
 int is_prime(int n, int start);
 int is_prime_number(int n)
