@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * _factorial: this command prints the factoria of a given number
- *
- * return: always 0 (success)
- */
+* factorial - searchs for the factorial of a number
+* @n: the number to find the factorial of
+*
+* Return: the factorial of the number
+*/
 int factorial(int n)
 {
 	int next;
