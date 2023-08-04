@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main print out argument that is pass to it.
- * @argc: Is the number argument pass to it.
- * @argv: prints out the value of the argument pass to it.
+ * main - print argument name.
+ * @argc: number of argument.
+ * @argv: value of argument.
  *
- * Return: always 0 (success)
+ * Return:0.
  */
 int main(int argc,  char *argv[])
 {
