@@ -1,52 +1,101 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * strtow - A function that splits a string into words
- * @str: An input pointer of the string to split
- * Return: Apointer to concatened strings or NULL if it str is NULL
- */
+*strtow - splits a stirng into words
+*@str: string to be splitted
+*
+*Return: pointer to the array of splitted words
+*/
+
 char **strtow(char *str)
 {
-	char **array;
-	int i = 0, j, n;
+	char **split;
+	int i, j = 0, temp = 0, size = 0, words = num_words(str);
 
-	int k = 0, len = 0, count = 0;
-
-	if (str == NULL || *str == '\0')
+	if (words == 0)
 		return (NULL);
-	for (; str[i]; i++)
+	split = (char **) malloc(sizeof(char *) * (words + 1));
+	if (split != NULL)
 	{
-		if ((str[i] != ' ' || *str != '\t') &&
-				((str[i + 1] == ' ' || str[i + 1] == '\t') || str[i + 1] == '\n'))
-			count++;
-	}
-	if (count == 0)
-		return (NULL);
-	array = malloc(sizeof(char *) * (count + 1));
-	if (array == NULL)
-		return (NULL);
-	for (i = 0; str[i] != '\0' && k < count; i++)
-	{
-		if (str[i] != ' ' || str[i] != '\t')
+		for (i = 0; i <= len(str) && words; i++)
 		{
-			len = 0;
-			j = i;
-			while ((str[j] != ' ' || str[j] != '\t') && str[j] != '\0')
-				j++, len++;
-			array[k] = malloc((len + 1) * sizeof(char));
-			if (array[k] == NULL)
+			if ((str[i] != ' ') && (str[i] != '\0'))
+				size++;
+			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 			{
-				for (k = k - 1; k >= 0; k++)
-					free(array[k]);
-				free(array);
-				return (NULL);
+				split[j] = (char *) malloc(sizeof(char) * size + 1);
+				if (split[j] != NULL)
+				{
+					while (temp < size)
+					{
+						split[j][temp] = str[(i - size) +temp];
+						temp++;
+					}
+					split[j][temp] = '\0';
+					size = temp = 0;
+					j++;
+				}
+				else
+				{
+					while (j-- >= 0)
+					free(split[j]);
+					free(split);
+					return (NULL);
+				}
 			}
-			for (n = 0; n < len; n++, i++)
-				array[k][n] = str[i];
-			array[k++][n] = '\0';
 		}
+		split[words] = NULL;
+		return (split);
 	}
-	array[k] = NULL;
-	return (array);
+	else
+		return (NULL);
+}
+
+
+/**
+* num_words - counts the number of words in str
+*@str: string to be used
+*
+*Return: number of words
+*/
+int num_words(char *str)
+{
+	int i = 0, words = 0;
+
+	while (i <= len(str))
+		{
+			if ((str[i] != ' ') && (str[i] != '\0'))
+			{
+				i++;
+			}
+			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+			{
+				words += 1;
+					i++;
+			}
+			else
+			{
+				i++;
+			}
+		}
+		return (words);
+}
+
+/**
+* len - returns length of str
+*@str: string to be counted
+*
+* Return: length of the string
+*/
+
+int len(char *str)
+{
+	int len = 0;
+
+	if (str != NULL)
+	{
+		while (str[len])
+		len++;
+	}
+	return (len);
 }
