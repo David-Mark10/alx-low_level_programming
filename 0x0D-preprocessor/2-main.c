@@ -2,13 +2,10 @@
 /**
  * main - to print a program that prints it name as output
  *
- * Return: return the name of the program.
+ * Return: return success.
  */
-int main(int argc, char *argv[])
+int main()
 {
-	int i;
-	
-	for (i; i < argc; i++)
-		printf("%s\n", argv[i]);
+	printf("%s\n", __FILE__);
 	return (0);
-}	
+}
