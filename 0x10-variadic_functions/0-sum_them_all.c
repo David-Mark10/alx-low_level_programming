@@ -2,7 +2,7 @@
 /**
  * sum_them_all - this sum all the parameters.
  * @n: the first parameter.
- * 
+ *
  * Return: return 0 if n is null.
  * or sum if n is not equal to 0.
  */
@@ -22,6 +22,6 @@ int sum_them_all(const unsigned int n, ...)
 		for (; j <= n; j++)
 		total = va_arg(arg, int);
 	}
-	va_end (arg);
+	va_end(arg);
 	return (total);
 }

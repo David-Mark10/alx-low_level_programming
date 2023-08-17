@@ -7,22 +7,22 @@
  * Return: nothing since it type is void.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
-{       
+{
 	va_list num;
-        unsigned int j;
-	
+	unsigned int j;
+
 	num = 0;
 
-	va_start (num, n);
+	va_start(num, n);
 
 	for (j = 0; j <= n; j++)
-		{
-			num = va_arg(num, int);
-			printf("%d\n", num);
+	{
+		num = va_arg(num, int);
+		printf("%d\n", num);
 
-			if (j != (n - i); && separator != NULL)
-				printf("%s", separator);
-		}
-		printf("\n");
-		va_end(num);
+		if (j != (n - i) && separator != NULL)
+			printf("%s\n", separator);
+	}
+	printf("\n");
+	va_end(num);
 }
