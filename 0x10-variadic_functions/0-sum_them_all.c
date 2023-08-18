@@ -5,6 +5,7 @@
  * sum_them_all - a function that sum all the parameters.
  * @n: the number of parameters.
  * @...: other parameters
+ * @struct_print: print output 
  * Return: return 0 if n is null.or sum if n is not equal to 0.
  */
 int sum_them_all(const unsigned int n, ...)
