@@ -5,6 +5,7 @@
  * @...: other parameters
  * Return: return 0 if n is null.or sum if n is not equal to 0.
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list li;
