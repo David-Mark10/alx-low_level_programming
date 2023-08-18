@@ -20,7 +20,7 @@ int sum_them_all(const unsigned int n, ...)
 	if (n != 0)
 	{
 		for (j = 0; j < n; j++)
-		sum += va_arg(sma, int);
+			sum += va_arg(sma, int);
 	}
 
 	va_end(sma);
