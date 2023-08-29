@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * print_listint_t - print the elements of a listint_t list
+ * print_listint - print the elements of a listint_t list
  * @h: pointer to the first node
  *
- * return: return the number of node
+ * Return: return the number of node
  */
 size_t print_listint(const listint_t *h)
 {
