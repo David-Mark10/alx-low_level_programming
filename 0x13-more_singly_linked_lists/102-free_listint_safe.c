@@ -7,6 +7,8 @@
  * @h: pointer to listint_t structure
  * Return: size of the list that was set free
  */
+void free_list(listint_t *head);
+
 size_t free_listint_safe(listint_t **h)
 {
 	size_t cnt = 0;
