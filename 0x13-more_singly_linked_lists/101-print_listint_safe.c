@@ -3,8 +3,8 @@
 
 /**
  * print_listint_safe - A function that prints the elementsin a  list
- * @head: The pointer to listint_t structure
- * Return: The number of nodes Exits with 98 on failure
+ * @head: A pointer to listint_t structure
+ * Return: The number of nodes. Exits with 98 on failure
  */
 size_t print_listint_safe(const listint_t *head)
 {
