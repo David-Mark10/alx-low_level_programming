@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * print_binary - function that prints a binary number without % or /
- * @n: a number to be printed
+ * binary_to_uint - A function that converts
+ * a binary number to an unsigned int.
+ * @b: a number to be printed
  * Return: Nothing
  */
+int check_valid_string(const char *b);
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int dec = 0;
@@ -17,14 +19,13 @@ unsigned int binary_to_uint(const char *b)
 		str_len++;
 
 	while (str_len)
-	{	
+	{
 		dec += ((b[str_len - 1] - '0') * base);
 		base *= 2;
 		str_len--;
 	}
 	return (dec);
 }
-
 /**
  * check_valid_string - checks if a string has only 0's and 1's
  * @b: string to be checked
