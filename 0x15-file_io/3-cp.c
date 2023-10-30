@@ -12,7 +12,7 @@ void error_file(int file_from, int file_to, char *argv[])
 {
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2);
+		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
 		exit(99);
 	}
 	if (file_from == -1)
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	nchars = 1024;
 	while (nchars == 1024)
 	{
-		nchars = read(file_from, buf, 1024);
+		nchars = read(file_from, cptr, 1024);
 		if (nchars == -1)
 			error_file(-1, 0, argv);
 		fwr = write(file_to, cptr, nchars);
