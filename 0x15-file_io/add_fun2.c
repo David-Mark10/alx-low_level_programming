@@ -1,23 +1,39 @@
 #include "main.h"
 /**
- * print_entry - Prints the entry point of an ELF header.
- * @e_entry: The address of the ELF entry point.
- * @e_ptr: A pointer to an array containing the ELF class.
- */
-void print_entry(unsigned long int e_entry, unsigned char *e_ptr)
+* print_elf_data - Print the ELF data encoding from a buffer and
+* return endianness
+*
+* @buffer: Buffer containing ELF data encoding
+*
+* Return: Endianness of data encoding (1 for big endian,
+* 0 for little endian)
+*/
+int print_elf_data(const unsigned char *buffer)
 {
-        printf("  Entry point address:               ");
-
-        if (e_ptr[EI_DATA] == ELFDATA2MSB)
+        printf("  %-34s ", "Data:");
+        if (buffer[EI_DATA] == ELFDATA2MSB)
         {
-                e_entry = ((e_entry << 8) & 0xFF00FF00) |
-                          ((e_entry >> 8) & 0xFF00FF);
-                e_entry = (e_entry << 16) | (e_entry >> 16);
+                printf("2's complement, big endian\n");
+                return (1);
         }
-
-        if (e_ptr[EI_CLASS] == ELFCLASS32)
-                printf("%#x\n", (unsigned int)e_entry);
-
+        if (buffer[EI_DATA] == ELFDATA2LSB)
+        {
+                printf("2's complement, little endian\n");
+                return (0);
+        }
+        printf("Invalid data encoding\n");
+        return (0);
+}
+/**
+* print_elf_version - Print the ELF version from a buffer
+*
+* @buffer: Buffer containing ELF version
+*/
+void print_elf_version(const unsigned char *buffer)
+{
+        printf("  %-34s %u", "Version:", buffer[EI_VERSION]);
+        if (buffer[EI_VERSION] == EV_CURRENT)
+                printf(" (current)\n");
         else
-                printf("%#lx\n", e_entry);
+                printf("\n");
 }
